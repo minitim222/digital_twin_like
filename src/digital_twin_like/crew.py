@@ -1,8 +1,7 @@
 # src/digital_twin_like/crew.py
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-# Uncomment if you want to use tools
-# from crewai_tools import SerperDevTool
+from digital_twin_like.tools.knowledge_tool import KNOWLEDGE_TOOLS
 
 @CrewBase
 class DigitalTwinLike():
@@ -13,7 +12,7 @@ class DigitalTwinLike():
         return Agent(
             config=self.agents_config['digital_twin_tim'],
             verbose=True,
-            # tools=[SerperDevTool()] # Add tools if needed
+            tools=KNOWLEDGE_TOOLS  # Add knowledge base tools
         )
 
     @task

@@ -1,7 +1,27 @@
-# 🤖 Tim's Digital Twin - CrewAI Agent
+# 🤖 Tim's Digital Twin - CrewAI Agent with Voice Interaction
 
 ## 📋 Overview
 This project creates a CrewAI agent that embodies my skills, personality, and research background as a computational biology graduate student at Harvard University.
+
+## 🎤 **NEW in HW4: Voice Interaction!**
+The digital twin now supports voice-based interaction:
+- 🎙️ **Speech-to-Text**: Speak questions using OpenAI Whisper
+- 🔊 **Text-to-Speech**: Hear responses using gTTS
+- 💬 **Natural Conversation**: Voice-enabled Q&A with the digital twin
+
+**Quick Start with Voice**:
+```bash
+# Text Q&A with voice output (easiest)
+voice_twin --text
+
+# Full voice interaction (requires microphone)
+voice_twin --voice
+
+# Hear the digital twin introduce itself
+voice_twin --intro
+```
+
+📚 **Voice Documentation**: See [`QUICKSTART.md`](QUICKSTART.md) for voice setup or [`VOICE_README.md`](VOICE_README.md) for complete details.
 
 ## 🤝 AI Usage Disclosure
 **Percentage of AI assistance in this project:**
@@ -31,6 +51,7 @@ The agent can:
 ### 📋 Prerequisites
 - 🐍 Python 3.10+
 - 🔑 OpenAI API key
+- 🎬 FFmpeg (for voice features: `brew install ffmpeg` on macOS)
 
 ### 📦 Installation
 ```bash
